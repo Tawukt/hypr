@@ -44,15 +44,16 @@ hl.window_rule({
     workspace = "9 silent",
 })
 
+if os.getenv("HOST") == "burj" then
+    hl.workspace_rule({ workspace = 1, monitor = "DP-1", default = true })
+    hl.workspace_rule({ workspace = 6, monitor = "DP-3", default = true })
+    hl.workspace_rule({ workspace = 10, monitor = "DP-3"})
 
-hl.workspace_rule({ workspace = 1, monitor = "DP-1", default = true })
-hl.workspace_rule({ workspace = 6, monitor = "DP-3", default = true })
-
-for i = 2, 5 do
-    hl.workspace_rule({ workspace = i, monitor = "DP-1" })
+    for i = 2, 5 do
+        hl.workspace_rule({ workspace = i, monitor = "DP-1" })
+    end
+    for i = 7, 10 do
+        hl.workspace_rule({ workspace = i, monitor = "DP-3" })
+    end
 end
-for i = 6, 9 do
-    hl.workspace_rule({ workspace = i, monitor = "DP-3" })
-end
-
 
