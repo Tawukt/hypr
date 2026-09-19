@@ -25,6 +25,11 @@ hl.config({
         },
         tablet = {
         },
-    }
+    },
 })
 
+hl.gesture({
+    action = "workspace",
+    direction = "horizontal",
+    fingers = 2,
+})
