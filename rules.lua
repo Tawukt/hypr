@@ -44,7 +44,11 @@ hl.window_rule({
     workspace = "9 silent",
 })
 
-if os.getenv("HOST") == "burj" then
+local handle = io.popen("hostname")
+local hostname = handle:read("*l")
+handle:close()
+
+if hostname == "burj" then
     hl.workspace_rule({ workspace = 1, monitor = "DP-1", default = true })
     hl.workspace_rule({ workspace = 6, monitor = "DP-3", default = true })
     hl.workspace_rule({ workspace = 10, monitor = "DP-3"})
