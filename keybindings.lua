@@ -44,7 +44,7 @@ hl.bind(d.mainMod .. " + F1", hl.dsp.exec_cmd(
   "wl-paste | feh -"
 ))
 hl.bind("ALT + F3", hl.dsp.exec_cmd(
-  d.script .. "/ocrmath.sh \"python/OCRMath/main_p2t.py\""
+  d.script .. "/ocrmath.sh"
 ))
 hl.bind(d.mainMod .. " + SHIFT + W", hl.dsp.exec_cmd(
   "pkill waybar || waybar"
