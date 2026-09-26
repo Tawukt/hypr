@@ -37,6 +37,14 @@ hl.window_rule({
 })
 
 hl.window_rule({
+    name = "mpv",
+    match = {
+        title = "(?i).*mpv.*",
+    },
+    opacity = "1.0 override 1.0 override 1.0 override",
+})
+
+hl.window_rule({
     name = "obsidian-on-ws9",
     match = {
         title = "(?i).*obsidian.*",
