@@ -11,7 +11,7 @@ local d = require("default")
 
 
 hl.on("hyprland.start", function()
-    hl.exec_cmd("paplay \"$HOME/Music/effect/Windows xp startup.mp3\"")
+    hl.exec_cmd("paplay \"$HOME/Music/effect/PlayStation_Intro.mp3\"")
     hl.exec_cmd("waybar 1>/tmp/waybar.log")
     hl.exec_cmd("wal -R")
     hl.exec_cmd("hyprsunset")
@@ -24,6 +24,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("xremap \"$HOME/.config/xremap/config.yml\"")
     hl.exec_cmd(d.obsi, { workspace = "9 silent" })
     hl.exec_cmd("keepassxc", { workspace = "special:m silent" })
+    hl.exec_cmd(d.script .. "/git_check.sh")
 end)
 
 
