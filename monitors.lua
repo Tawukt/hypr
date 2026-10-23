@@ -11,16 +11,17 @@ hl.monitor({ output = "DP-3", mode = "1920x1080@144", position = "0x-1080", scal
 hl.monitor({ output = "LVDS-1", mode = "highres", position = "auto", scale = 1.2 })
 
 -- unscale XWayland
-hostname = io.popen("hostname")
+local handle = io.popen("hostname")
+local hostname = handle:read("*l")
+handle:close()
 if hostname == "swangim" then
     hl.config({
         xwayland = {
             force_zero_scaling = true
         }
     })
-
     -- toolkit-specific scale
-    hl.env("GDK_SCALE", "2")
-    hl.env("XCURSOR_SIZE", "32")
+    hl.env("GDK_SCALE", "1.2")
+    hl.env("XCURSOR_SIZE", "24")
 end
 
