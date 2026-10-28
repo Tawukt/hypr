@@ -52,6 +52,9 @@ hl.bind(d.mainMod .. " + SHIFT + W", hl.dsp.exec_cmd(
 hl.bind("MOD5 + SPACE", hl.dsp.exec_cmd(
   "pkill rofi || " .. d.script .. "/rofi_other.sh"
 ))
+hl.bind(d.mainMod .. " + SHIFT + T", hl.dsp.exec_cmd(
+    d.script .. "/rofi_tmux.sh"
+))
 
 
 -- Window action
